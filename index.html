@@ -238,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/08/11/My first page/">
+    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/08/26/My first page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eggsyrup">
@@ -254,7 +254,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2019/08/11/My first page/" class="post-title-link" itemprop="url">欢迎访问Eggsyrup</a>
+              <a href="/2019/08/26/My first page/" class="post-title-link" itemprop="url">记JAVA环境配置遇到的问题</a>
             
           </h1>
         
@@ -270,7 +270,7 @@
                 
               
 
-              <time title="创建时间：2019-08-11 13:29:14 / 修改时间：15:54:11" itemprop="dateCreated datePublished" datetime="2019-08-11T13:29:14+08:00">2019-08-11</time>
+              <time title="创建时间：2019-08-26 19:48:00 / 修改时间：20:16:01" itemprop="dateCreated datePublished" datetime="2019-08-26T19:48:00+08:00">2019-08-26</time>
             </span>
           
             
@@ -290,9 +290,15 @@
 
       
           
-            <p>欢迎访问Eggsyrup</p>
-<h2 id="第一篇就随便写写吧"><a href="#第一篇就随便写写吧" class="headerlink" title="第一篇就随便写写吧"></a>第一篇就随便写写吧</h2><p>因为第一次写Blog，就大体介绍一下缘由和初衷吧<br><del>大概不久就会删除</del></p>
-<h2 id><a href="#" class="headerlink" title></a><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565514519009&di=10346a83a5a9722bd7c8d8da3b12416f&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201603%2F13%2F20160313124227_mvjn8.jpeg" alt="才不是拿来测试的炮灰"></h2><h2 id="本站是基于hexo部署在github的静态博客，由于本人的拖延症，即使在各路好哥哥和大神的帮助下也是半年才做成的辣鸡阉割版本，今后还会不断完善。"><a href="#本站是基于hexo部署在github的静态博客，由于本人的拖延症，即使在各路好哥哥和大神的帮助下也是半年才做成的辣鸡阉割版本，今后还会不断完善。" class="headerlink" title="本站是基于hexo部署在github的静态博客，由于本人的拖延症，即使在各路好哥哥和大神的帮助下也是半年才做成的辣鸡阉割版本，今后还会不断完善。"></a>本站是基于hexo部署在github的静态博客，由于本人的拖延症，即使在各路好哥哥和大神的帮助下也是半年才做成的辣鸡阉割版本，今后还会不断完善。</h2><p>该博客初步计划用于记录学习中遇到的值得记录和分享的困难，以及生活记录，读后感、观后感。还请各位多多关照   &gt;_&lt;</p>
+            <p>#java报错找不到文件找不到或无法加载主类</p>
+<p>JAVA配置环境时参考了网上的做法</p>
+<p>详细参考<a href="https://www.cnblogs.com/ForestDeer/p/6647402.html" title="eclipse下载，安装，JDK环境" target="_blank" rel="noopener">https://www.cnblogs.com/ForestDeer/p/6647402.html</a></p>
+<p>在安装classpath变量的路径时<br><img src="http://https://images2015.cnblogs.com/blog/1130990/201703/1130990-20170330174833805-1181053114.png" alt><br>设置成了如图所示的样子</p>
+<p>结果运行程序的时候报错</p>
+<pre><code>“找不到文件找不到或无法加载主类”</code></pre><p>从网上搜集资料<br>得知在设置环境变量时如后面不加</p>
+<pre><code>;.;</code></pre><p>就会默认只能在该目录下读取文件<br>，加上后就会搜索其子目录。</p>
+<p>装在C盘就没那么多事儿了，但是卡呀<br><img src="http://b-ssl.duitang.com/uploads/item/201704/08/20170408213521_E4NfZ.png" alt></p>
+<p>PS:如果程序编写错误也会报一样的错</p>
 
           
         
