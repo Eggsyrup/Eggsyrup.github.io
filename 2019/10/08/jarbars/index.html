@@ -56,31 +56,35 @@
   };
 </script>
 
-  <meta name="description" content="high-functioning sociopath">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eggsyrup">
-<meta property="og:url" content="http://eggsyrup.github.io/index.html">
+  <meta name="description" content="记jarbas渗透过程的问题  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战    描述：向90年代末的巴西搜索引擎致敬。 实验目的：获取目标root shell；获取flag 实验环境：vmware，kali操作，jarbas作靶机内网桥接 https://xz.aliyun.com/t/3092 本篇只对遇到的问题做记录，不对整个渗透过程作具体阐述 端口扫描工具：nmap">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jarbars">
+<meta property="og:url" content="http://eggsyrup.github.io/2019/10/08/jarbars/index.html">
 <meta property="og:site_name" content="Eggsyrup">
-<meta property="og:description" content="high-functioning sociopath">
+<meta property="og:description" content="记jarbas渗透过程的问题  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战    描述：向90年代末的巴西搜索引擎致敬。 实验目的：获取目标root shell；获取flag 实验环境：vmware，kali操作，jarbas作靶机内网桥接 https://xz.aliyun.com/t/3092 本篇只对遇到的问题做记录，不对整个渗透过程作具体阐述 端口扫描工具：nmap">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://imgsa.baidu.com/forum/w%3D580/sign=ef2d4771d988d43ff0a991fa4d1ed2aa/89e93901213fb80e68c281d339d12f2eb93894a7.jpg">
+<meta property="og:updated_time" content="2019-10-08T13:46:08.705Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eggsyrup">
-<meta name="twitter:description" content="high-functioning sociopath">
-  <link rel="canonical" href="http://eggsyrup.github.io/">
+<meta name="twitter:title" content="jarbars">
+<meta name="twitter:description" content="记jarbas渗透过程的问题  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战    描述：向90年代末的巴西搜索引擎致敬。 实验目的：获取目标root shell；获取flag 实验环境：vmware，kali操作，jarbas作靶机内网桥接 https://xz.aliyun.com/t/3092 本篇只对遇到的问题做记录，不对整个渗透过程作具体阐述 端口扫描工具：nmap">
+<meta name="twitter:image" content="https://imgsa.baidu.com/forum/w%3D580/sign=ef2d4771d988d43ff0a991fa4d1ed2aa/89e93901213fb80e68c281d339d12f2eb93894a7.jpg">
+  <link rel="canonical" href="http://eggsyrup.github.io/2019/10/08/jarbars/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Eggsyrup</title>
+  <title>jarbars | Eggsyrup</title>
   
 
 
@@ -226,10 +230,11 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -250,9 +255,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/10/08/jarbars/" class="post-title-link" itemprop="url">jarbars</a>
+          <h1 class="post-title" itemprop="name headline">jarbars
+
             
           </h1>
         
@@ -287,8 +291,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <h1 id="记jarbas渗透过程的问题"><a href="#记jarbas渗透过程的问题" class="headerlink" title="记jarbas渗透过程的问题"></a>记jarbas渗透过程的问题</h1><p>  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战</p>
+        <h1 id="记jarbas渗透过程的问题"><a href="#记jarbas渗透过程的问题" class="headerlink" title="记jarbas渗透过程的问题"></a>记jarbas渗透过程的问题</h1><p>  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战</p>
 <p>   描述：向90年代末的巴西搜索引擎致敬。</p>
 <p>实验目的：获取目标root shell；获取flag</p>
 <p>实验环境：vmware，kali操作，jarbas作靶机<br>内网桥接</p>
@@ -309,223 +312,86 @@
 <hr>
 <p>施工中………………</p>
 
-          
-        
-      
     </div>
 
     
     
     
+        
+      
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="Eggsyrup 微信支付">
+        <p>微信支付</p>
+      </div>
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="Eggsyrup 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/学习/" rel="tag"><i class="fa fa-tag"></i># 学习</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/15/LinkList/" rel="next" title="LinkList">
+                  <i class="fa fa-chevron-left"></i> LinkList
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/09/15/LinkList/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eggsyrup">
-      <meta itemprop="description" content="high-functioning sociopath">
-      <meta itemprop="image" content="/images/time.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eggsyrup">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/09/15/LinkList/" class="post-title-link" itemprop="url">LinkList</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-15 11:11:21" itemprop="dateCreated datePublished" datetime="2019-09-15T11:11:21+08:00">2019-09-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-08 21:49:52" itemprop="dateModified" datetime="2019-10-08T21:49:52+08:00">2019-10-08</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="便于使用指针的访问形式的结构体命名方式"><a href="#便于使用指针的访问形式的结构体命名方式" class="headerlink" title="便于使用指针的访问形式的结构体命名方式"></a>便于使用指针的访问形式的结构体命名方式</h1><p>在完成数据结构第一次实验报告的时候，被要求完成单链表的交并差运算。<br><img src="https://user.qzone.qq.com/2504899495/311/" alt></p>
-<p>结构体和主函数都是由老师写好的，没有注意结构体的命名形式。看着满屏的LinkList，故以为LinkList为结构体的别名。</p>
-<p>在声明变量和申请内存时就使用了如下方式</p>
-<pre><code>LinkList *r = La;
-a = (Linklist *)malloc(sizeof(Linklist));</code></pre><p>编译时会报错</p>
-<pre><code>cpp|46|error: request for member &apos;data&apos; in &apos;* r&apos;, which is of pointer type &apos;LinkList {aka LNode*}&apos; (maybe you meant to use &apos;-&gt;&apos; ?)|</code></pre><p>于是回头查看结构体定义部分</p>
-<pre><code>typedef struct LNode
-{
-    ......
-}LNode,*LinkList;</code></pre><p>发现了如上的的定义形式，即 *LinkList</p>
-<p>如此定义时 LinkList相当于 Lnode *</p>
-<p>遂将源代码改为</p>
-<pre><code>**LinkList** r = La;
-a = (**Linklist** )malloc(sizeof(**Lnode**));</code></pre><p>这种定义方式虽然方便了程序员定义指针，但是更容易混淆和导致误解</p>
-<p><del>有利有弊吧，项目小组内部商量好了的话感觉还是挺好使的</del></p>
-<p><img src="https://imgsa.baidu.com/forum/w%3D580/sign=07ce785ad2c451daf6f60ce386fd52a5/13504fc2d5628535f9c632259fef76c6a7ef6394.jpg" alt></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/08/26/My first page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eggsyrup">
-      <meta itemprop="description" content="high-functioning sociopath">
-      <meta itemprop="image" content="/images/time.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eggsyrup">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/26/My first page/" class="post-title-link" itemprop="url">记JAVA环境配置遇到的问题</a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-26 19:48:00 / 修改时间：20:16:01" itemprop="dateCreated datePublished" datetime="2019-08-26T19:48:00+08:00">2019-08-26</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>#java报错找不到文件找不到或无法加载主类</p>
-<p>JAVA配置环境时参考了网上的做法</p>
-<p>详细参考<a href="https://www.cnblogs.com/ForestDeer/p/6647402.html" title="eclipse下载，安装，JDK环境" target="_blank" rel="noopener">https://www.cnblogs.com/ForestDeer/p/6647402.html</a></p>
-<p>在安装classpath变量的路径时<br><img src="http://https://images2015.cnblogs.com/blog/1130990/201703/1130990-20170330174833805-1181053114.png" alt><br>设置成了如图所示的样子</p>
-<p>结果运行程序的时候报错</p>
-<pre><code>“找不到文件找不到或无法加载主类”</code></pre><p>从网上搜集资料<br>得知在设置环境变量时如后面不加</p>
-<pre><code>;.;</code></pre><p>就会默认只能在该目录下读取文件<br>，加上后就会搜索其子目录。</p>
-<p>装在C盘就没那么多事儿了，但是卡呀<br><img src="http://b-ssl.duitang.com/uploads/item/201704/08/20170408213521_E4NfZ.png" alt></p>
-<p>PS:如果程序编写错误也会报一样的错</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
 
 
           </div>
           
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk3NC8yMjQ4NQ=="></div>
+  </div>
+  
+  
 
         </div>
           
@@ -540,8 +406,17 @@ a = (**Linklist** )malloc(sizeof(**Lnode**));</code></pre><p>这种定义方式�
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -630,6 +505,23 @@ a = (**Linklist** )malloc(sizeof(**Lnode**));</code></pre><p>这种定义方式�
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#记jarbas渗透过程的问题"><span class="nav-number">1.</span> <span class="nav-text">记jarbas渗透过程的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#端口扫描"><span class="nav-number">1.1.</span> <span class="nav-text">端口扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录爆破"><span class="nav-number">1.2.</span> <span class="nav-text">目录爆破</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用metasploit进行攻击"><span class="nav-number">1.3.</span> <span class="nav-text">使用metasploit进行攻击</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -732,7 +624,24 @@ a = (**Linklist** )malloc(sizeof(**Lnode**));</code></pre><p>这种定义方式�
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
     
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 
 </body>
 </html>
