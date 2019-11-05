@@ -236,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/10/08/jarbars/">
+    <link itemprop="mainEntityOfPage" href="http://eggsyrup.github.io/2019/11/05/关于VS2010自动生成的预编译头/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eggsyrup">
@@ -252,7 +252,7 @@
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2019/10/08/jarbars/" class="post-title-link" itemprop="url">jarbars</a>
+              <a href="/2019/11/05/关于VS2010自动生成的预编译头/" class="post-title-link" itemprop="url">关于VS2010自动生成的预编译头</a>
             
           </h1>
         
@@ -268,7 +268,7 @@
                 
               
 
-              <time title="创建时间：2019-10-08 21:05:59 / 修改时间：22:00:24" itemprop="dateCreated datePublished" datetime="2019-10-08T21:05:59+08:00">2019-10-08</time>
+              <time title="创建时间：2019-11-05 19:30:55 / 修改时间：20:04:06" itemprop="dateCreated datePublished" datetime="2019-11-05T19:30:55+08:00">2019-11-05</time>
             </span>
           
             
@@ -288,26 +288,11 @@
 
       
           
-            <h1 id="记jarbas渗透过程的问题"><a href="#记jarbas渗透过程的问题" class="headerlink" title="记jarbas渗透过程的问题"></a>记jarbas渗透过程的问题</h1><p>  Jarbas1.0是一个难度为初级的Boot2root/CTF挑战</p>
-<p>   描述：向90年代末的巴西搜索引擎致敬。</p>
-<p>实验目的：获取目标root shell；获取flag</p>
-<p>实验环境：vmware，kali操作，jarbas作靶机<br>内网桥接</p>
-<p><a href="https://xz.aliyun.com/t/3092" title="详细过程参照此处" target="_blank" rel="noopener">https://xz.aliyun.com/t/3092</a></p>
-<p>本篇只对遇到的问题做记录，不对整个渗透过程作具体阐述</p>
-<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><p>工具：nmap</p>
-<p>实验指导给出的命令为</p>
-<pre><code>nmap -A [IP]</code></pre><p>也可以使用</p>
-<pre><code>nmap -sV -p- [IP]</code></pre><p>个人感觉会更加便利</p>
-<h2 id="目录爆破"><a href="#目录爆破" class="headerlink" title="目录爆破"></a>目录爆破</h2><p>工具：kali自带的dirb（类似于windows平台的御剑一类的工具）</p>
-<p>dirb的默认字典是/user hare/dirb/wordlist/common.txt</p>
-<p>合天提供的实验环境可能是采用了做好的强力字典，故实验指导书中能直接爆破。而kali自带的字典是爆破不出来的，但网上提供了另一种方式：<br>用扩展名探测，如php,html；</p>
-<pre><code>dirb http://xxx... :[端口] -x .php(.html)   #dirb的-x参数，代表匹配扩展名，会将自店内的内容加入扩展名进行爆破</code></pre><p>如此就能爆破出字典中原不存在的access.html（原字典中含有access）<br>当然如果你有一个像大表哥那样的大字典也就没那么多事儿了</p>
-<h2 id="使用metasploit进行攻击"><a href="#使用metasploit进行攻击" class="headerlink" title="使用metasploit进行攻击"></a>使用metasploit进行攻击</h2><p>工具：如题</p>
-<p>这一part唯一的问题就是由于我的笨b手把参数设置错了两次</p>
-<p>记录的原因是因为第一次实战这个工具，<del>感觉这工具台吊了，有手就行</del>只是照着实验指导书上照葫芦画瓢，很多参数的具体意义还没有弄懂，于是插个眼，遇到问题再回来看看。</p>
-<p><img src="http://m.qpic.cn/psb?/V11O3ncQ21x8JU/AHh2edMhlNeQ6w*UO0ZDlHyfPDVLiVzVK8Ky7ZkJO4s!/b/dDMBAAAAAAAA&bo=tQG5AQAAAAADBy4!&rf=viewer_4" alt></p>
-<hr>
-<p>施工中………………</p>
+            <p>这个头文件可真是把我憋毁了<br>自从用了大一下学了c++以来真的没怎么用过vs2010。因为大多数的教材和编译器都给的是如上这一种的默认的格式，老师也没有细讲，于是就用codeblocks糊弄了一年。</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+using namespace std;</code></pre><p>而他vs2010和一些较高的版本就是带着那么个小头文件</p>
+<pre><code>#include &quot;stdafx.h&quot;</code></pre><p>而且还一层套一层，每个头文件还套了一大堆我现在都看不懂的注释，例如mfc之类的。直到大二才静下心研究了一下VS2010的头文件到底怎么用。<br>头的具体作用好处可以参照<a href="https://blog.csdn.net/weixin_41813895/article/details/79698789" target="_blank" rel="noopener">Visual Studio2017自动生成的#include“stdafx.h”详解及解决方案</a><br><strong>然而用起来其实很简单就是只要在头文件stdafx.h里TODO的注释冒号后面的内容删掉（TODO前面的注释符号不要删），然后换行引引用头文件夹里的.h文件就可以了（前提是要在头文件里）。</strong><br><img src="http://a1.qpic.cn/psb?/V11O3ncQ21x8JU/gXhkJItV7tOTCiUHF5ws6N6TOwCeg25T0wTVJpUosaY!/c/dOAAAAAAAAAA&ek=1&kp=1&pt=0&bo=cgFqAQAAAAARFzg!&tl=3&vuin=983272259&tm=1572955200&sce=60-2-2&rf=0-0" alt="难受的一批"></p>
 
           
         
